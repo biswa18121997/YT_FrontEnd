@@ -19,7 +19,7 @@ function IndividualComments({comments, setCommentsList}) {
                 sendToServer = {token, user, commentID:id, videoID , actionType, editComment};
             }
             
-            let reqToServer = await fetch(`http://localhost:8086/video/${params.id}`,{
+            let reqToServer = await fetch(`https://yt-backend-kjsa.onrender.com/video/${params.id}`,{
                                             method: 'PATCH',
                                             headers: { 'Content-Type': 'application/json' },
                                             body: JSON.stringify(sendToServer)

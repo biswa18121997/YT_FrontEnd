@@ -17,7 +17,7 @@ export default  function Login(){
         e.preventDefault();
         try {
             //sending email pass to middlewares..
-            const res = await fetch('http://localhost:8086/login', { // Change URL if needed
+            const res = await fetch('https://yt-backend-kjsa.onrender.com/login', { // Change URL if needed
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })

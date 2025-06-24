@@ -58,7 +58,7 @@ function IndividualChannel({data, setChannelData}) {
         }
       }
     
-        let reqToServer = await fetch('http://localhost:8086/channel',{
+        let reqToServer = await fetch('https://yt-backend-kjsa.onrender.com/channel',{
                               method: 'PATCH',
                               headers: { 'Content-Type': 'application/json' },
                               body: JSON.stringify({sendToServer,token})

@@ -13,7 +13,7 @@ export default function Profile() {
   async function fetchProfileDetails() {
     try {
       let sendToServer = {token, user, profile}
-      let reqToServer = await fetch(`http://localhost:8086/profile`,{
+      let reqToServer = await fetch(`https://yt-backend-kjsa.onrender.com/profile`,{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(sendToServer)

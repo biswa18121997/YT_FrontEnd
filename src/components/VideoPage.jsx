@@ -32,7 +32,7 @@ function VideoPage() {
     async function fetchVideoComments() {
         try {
             console.log(token)
-            let reqToServer = await fetch(`http://localhost:8086/video/${videoID}`,{
+            let reqToServer = await fetch(`https://yt-backend-kjsa.onrender.com/video/${videoID}`,{
                             method: 'GET',
                             headers: { 'Content-Type': 'application/json',
                                         'Authorization': `JWT ${token}`
@@ -54,7 +54,7 @@ function VideoPage() {
                     videoId:videoID,token,user,videoData
                 };
                console.log(vidPageReq);
-                let reqVideoPageData = await fetch(`http://localhost:8086/video/${params.id}`,{
+                let reqVideoPageData = await fetch(`https://yt-backend-kjsa.onrender.com/video/${params.id}`,{
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify( {videoId:videoID,token,user,videoData} )
@@ -86,7 +86,7 @@ function VideoPage() {
                 token, user, videoId:videoID, videoData: data.items[0] ,update : actionType,comment
             }
             console.log(videoID);
-            let sendRequest = await fetch(`http://localhost:8086/video/${params.id}`,{
+            let sendRequest = await fetch(`https://yt-backend-kjsa.onrender.com/video/${params.id}`,{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({token, user, videoId:videoID, videoData: data.items[0] ,update : actionType,comment})

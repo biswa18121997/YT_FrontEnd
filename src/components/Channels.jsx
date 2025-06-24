@@ -17,7 +17,7 @@ function Channels() {
     async function fetchChannels() {
         try {
             let dataSent = {token, user }
-            let fetcher = await fetch('http://localhost:8086/channel',{
+            let fetcher = await fetch('https://yt-backend-kjsa.onrender.com/channel',{
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({token, user} )
@@ -36,7 +36,7 @@ function Channels() {
     async function createChannel(e) {
         e.preventDefault();
         try {
-            let dataSent = await fetch('http://localhost:8086/channel',{
+            let dataSent = await fetch('https://yt-backend-kjsa.onrender.com/channel',{
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({token, user, chBanner, chDescription, chTags, chName})

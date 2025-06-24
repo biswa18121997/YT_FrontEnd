@@ -16,7 +16,7 @@ function Downloads() {
   async function fetchDownloads() {
     try {
       let sendToServer = {token, user}
-      let reqToServer = await fetch(`http://localhost:8086/downloads`,{
+      let reqToServer = await fetch(`https://yt-backend-kjsa.onrender.com/downloads`,{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(sendToServer)

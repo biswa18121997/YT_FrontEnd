@@ -13,7 +13,7 @@ function ChannelsPage() {
                 channelId : params.id,
                 token
             }
-            let reqToServer =await fetch(`http://localhost:8086/channels/${params.id}`,{
+            let reqToServer =await fetch(`https://yt-backend-kjsa.onrender.com/channels/${params.id}`,{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(sendToServer)

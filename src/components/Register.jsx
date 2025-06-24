@@ -14,7 +14,7 @@ export default function Register(){
     async function handleRegister(e){
         e.preventDefault();
         try {
-            const res = await fetch('http://localhost:8086/register', {
+            const res = await fetch('https://yt-backend-kjsa.onrender.com/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({name, email: mail , password })
